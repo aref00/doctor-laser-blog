@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1012.5823"
+   height="787.79944"
+   viewBox="0 0 267.91239 208.4386"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1"><linearGradient
+       id="linearGradient9"><stop
+         style="stop-color:#7f2aff;stop-opacity:1"
+         offset="0"
+         id="stop8" /><stop
+         style="stop-color:#e7709a;stop-opacity:1"
+         offset="1"
+         id="stop9" /></linearGradient><linearGradient
+       id="linearGradient1"><stop
+         style="stop-color:#7f2aff;stop-opacity:1"
+         offset="0"
+         id="stop1" /><stop
+         style="stop-color:#e7709a;stop-opacity:1"
+         offset="1"
+         id="stop2" /></linearGradient><linearGradient
+       xlink:href="#linearGradient9"
+       id="linearGradient2"
+       x1="291.63187"
+       y1="101.83187"
+       x2="362.51276"
+       y2="101.83187"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-243.59195,-46.209011)" /><linearGradient
+       xlink:href="#linearGradient1"
+       id="linearGradient3"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,1,490.98598,-46.209013)"
+       x1="291.63187"
+       y1="101.83187"
+       x2="362.51276"
+       y2="101.83187" /></defs><g
+     id="layer1"
+     transform="translate(-1.510476,-31.247367)"><g
+       id="g3"
+       transform="matrix(1.179932,0,0,1.179932,-10.487399,48.106669)"><g
+         id="g9"
+         transform="matrix(1.5005693,0,0,1.5005693,-61.918926,-9.4277974)"><path
+           style="fill:url(#linearGradient2);stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 76.686158,69.943074 C 8.3248481,109.53729 121.14791,145.86259 118.8872,71.001414 117.87462,37.4708 85.951478,9.6068888 50.918468,-3.2278718 c -0.23008,-0.08429 -0.74664,0.322256 -0.77534,0.611107 -2.58639,26.0483998 -8.71499,64.1786538 26.543,72.5598388 z"
+           id="path1" /><path
+           style="fill:url(#linearGradient3);stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 170.70787,69.943072 c 68.36131,39.594218 -44.46175,75.919518 -42.20104,1.05834 1.01258,-33.530614 32.93572,-61.3945262 67.96873,-74.2292867 0.23008,-0.08429 0.74664,0.322256 0.77534,0.611107 2.58639,26.0484007 8.71499,64.1786547 -26.543,72.5598397 z"
+           id="path2" /></g></g></g></svg>
