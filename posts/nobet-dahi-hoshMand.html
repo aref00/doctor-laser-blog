@@ -1,261 +1,439 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="نوبت‌دهی آنلاین و یادآوری پیامکی چطور می‌تواند غیبت بیماران را کاهش دهد و درآمد کلینیک لیزر و زیبایی شما را افزایش دهد — راهنمای کامل." />
-  <title>نوبت‌دهی هوشمند | وبلاگ دکتر لیزر</title>
-  <link rel="stylesheet" href="../style.css" />
-</head>
-<body>
-
-  <!-- ══════════════════════════════════════════════
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="نوبت‌دهی آنلاین و یادآوری پیامکی چطور می‌تواند غیبت بیماران را کاهش دهد و درآمد کلینیک لیزر و زیبایی شما را افزایش دهد — راهنمای کامل."
+		/>
+		<title>نوبت‌دهی هوشمند | وبلاگ دکتر لیزر</title>
+		<link rel="stylesheet" href="../style.css" />
+	</head>
+	<body>
+		<!-- ══════════════════════════════════════════════
        هدر
   ══════════════════════════════════════════════ -->
-  <header class="site-header" role="banner">
-    <div class="container">
+		<header class="site-header" role="banner">
+			<div class="container">
+				<a
+					href="../index.html"
+					class="logo"
+					aria-label="دکتر لیزر — صفحه اصلی"
+				>
+					<img
+						src="/blog/assets/logo.svg"
+						width="48px"
+						height="48px"
+					/>
+					<span class="logo__text">
+						<span class="logo__name">دکتر لیزر</span>
+						<span class="logo__tagline">لیزر و زیبایی</span>
+					</span>
+				</a>
 
-      <a href="../index.html" class="logo" aria-label="دکتر لیزر — صفحه اصلی">
-        <svg class="logo__icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="butterfly-grad-post1" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-              <stop offset="0%"   stop-color="#9534C5"/>
-              <stop offset="50%"  stop-color="#c044e0"/>
-              <stop offset="100%" stop-color="#e8457a"/>
-            </linearGradient>
-          </defs>
-          <path d="M19 19 C19 19 6 14 4 6 C3 2 7 1 10 3 C13 5 17 12 19 19Z"  fill="url(#butterfly-grad-post1)" opacity="0.9"/>
-          <path d="M19 19 C19 19 32 14 34 6 C35 2 31 1 28 3 C25 5 21 12 19 19Z" fill="url(#butterfly-grad-post1)" opacity="0.9"/>
-          <path d="M19 19 C19 19 7 24 5 31 C4 35 8 37 11 35 C14 33 17 26 19 19Z" fill="url(#butterfly-grad-post1)" opacity="0.7"/>
-          <path d="M19 19 C19 19 31 24 33 31 C34 35 30 37 27 35 C24 33 21 26 19 19Z" fill="url(#butterfly-grad-post1)" opacity="0.7"/>
-          <ellipse cx="19" cy="19" rx="1.8" ry="7" fill="#7a28a8"/>
-          <path d="M18 12 C16 8 13 6 12 4" stroke="#9534C5" stroke-width="1" stroke-linecap="round"/>
-          <path d="M20 12 C22 8 25 6 26 4" stroke="#9534C5" stroke-width="1" stroke-linecap="round"/>
-          <circle cx="12" cy="4" r="1.2" fill="#e8457a"/>
-          <circle cx="26" cy="4" r="1.2" fill="#e8457a"/>
-        </svg>
-        <span class="logo__text">
-          <span class="logo__name">دکتر لیزر</span>
-          <span class="logo__tagline">لیزر و زیبایی</span>
-        </span>
-      </a>
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="باز کردن منوی ناوبری"
+					aria-expanded="false"
+					aria-controls="nav-menu"
+				>
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+				</button>
 
-      <button
-        class="nav-toggle"
-        id="nav-toggle"
-        aria-label="باز کردن منوی ناوبری"
-        aria-expanded="false"
-        aria-controls="nav-menu"
-      >
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
+				<nav
+					id="nav-menu"
+					class="nav__menu"
+					role="navigation"
+					aria-label="ناوبری اصلی"
+				>
+					<a href="https://doctor-laser.ir" class="nav__link">خانه</a>
+					<a
+						href="../index.html"
+						class="nav__link nav__link--active"
+						aria-current="page"
+						>وبلاگ</a
+					>
+					<a href="https://doctor-laser.ir#about" class="nav__link"
+						>درباره ما</a
+					>
+					<a href="https://doctor-laser.ir#contact" class="nav__link"
+						>تماس</a
+					>
+					<a href="https://doctor-laser.ir" class="nav__cta"
+						>شروع رایگان</a
+					>
+				</nav>
+			</div>
+		</header>
 
-      <nav id="nav-menu" class="nav__menu" role="navigation" aria-label="ناوبری اصلی">
-        <a href="https://doctor-laser.ir"         class="nav__link">خانه</a>
-        <a href="../index.html"                    class="nav__link nav__link--active" aria-current="page">وبلاگ</a>
-        <a href="https://doctor-laser.ir#about"   class="nav__link">درباره ما</a>
-        <a href="https://doctor-laser.ir#contact" class="nav__link">تماس</a>
-        <a href="https://doctor-laser.ir"          class="nav__cta">شروع رایگان</a>
-      </nav>
-
-    </div>
-  </header>
-
-  <!-- ══════════════════════════════════════════════
+		<!-- ══════════════════════════════════════════════
        محتوای مقاله
   ══════════════════════════════════════════════ -->
-  <main id="main-content">
-    <article class="post-layout" itemscope itemtype="https://schema.org/BlogPosting">
+		<main id="main-content">
+			<article
+				class="post-layout"
+				itemscope
+				itemtype="https://schema.org/BlogPosting"
+			>
+				<!-- مسیر صفحه -->
+				<nav class="breadcrumb" aria-label="مسیر صفحه">
+					<a href="https://doctor-laser.ir">خانه</a>
+					<span class="breadcrumb__sep" aria-hidden="true"
+						>&#8250;</span
+					>
+					<a href="../index.html">وبلاگ</a>
+					<span class="breadcrumb__sep" aria-hidden="true"
+						>&#8250;</span
+					>
+					<span aria-current="page">نوبت‌دهی هوشمند</span>
+				</nav>
 
-      <!-- مسیر صفحه -->
-      <nav class="breadcrumb" aria-label="مسیر صفحه">
-        <a href="https://doctor-laser.ir">خانه</a>
-        <span class="breadcrumb__sep" aria-hidden="true">&#8250;</span>
-        <a href="../index.html">وبلاگ</a>
-        <span class="breadcrumb__sep" aria-hidden="true">&#8250;</span>
-        <span aria-current="page">نوبت‌دهی هوشمند</span>
-      </nav>
+				<!-- هدر مقاله -->
+				<header class="post-header">
+					<span class="badge badge--green">مدیریت کلینیک</span>
 
-      <!-- هدر مقاله -->
-      <header class="post-header">
+					<h1 class="post-header__title" itemprop="headline">
+						چطور نوبت‌دهی هوشمند، کلینیک شما را متحول می‌کند
+					</h1>
 
-        <span class="badge badge--green">مدیریت کلینیک</span>
+					<div class="post-header__meta" role="contentinfo">
+						<span class="post-header__meta-item">
+							<svg
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								aria-hidden="true"
+							>
+								<rect
+									x="3"
+									y="4"
+									width="18"
+									height="18"
+									rx="2"
+									ry="2"
+								/>
+								<line x1="16" y1="2" x2="16" y2="6" />
+								<line x1="8" y1="2" x2="8" y2="6" />
+								<line x1="3" y1="10" x2="21" y2="10" />
+							</svg>
+							<time itemprop="datePublished" datetime="2025-06-10"
+								>۲۰ خرداد ۱۴۰۴</time
+							>
+						</span>
+						<span class="post-header__meta-item">
+							<svg
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								aria-hidden="true"
+							>
+								<circle cx="12" cy="12" r="10" />
+								<polyline points="12 6 12 12 16 14" />
+							</svg>
+							۷ دقیقه مطالعه
+						</span>
+						<span class="post-header__meta-item">
+							<svg
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								aria-hidden="true"
+							>
+								<path
+									d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+								/>
+								<circle cx="12" cy="7" r="4" />
+							</svg>
+							تیم دکتر لیزر
+						</span>
+					</div>
+				</header>
 
-        <h1 class="post-header__title" itemprop="headline">
-          چطور نوبت‌دهی هوشمند، کلینیک شما را متحول می‌کند
-        </h1>
-
-        <div class="post-header__meta" role="contentinfo">
-          <span class="post-header__meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-            <time itemprop="datePublished" datetime="2025-06-10">۲۰ خرداد ۱۴۰۴</time>
-          </span>
-          <span class="post-header__meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-            ۷ دقیقه مطالعه
-          </span>
-          <span class="post-header__meta-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-              <circle cx="12" cy="7" r="4"/>
-            </svg>
-            تیم دکتر لیزر
-          </span>
-        </div>
-      </header>
-
-      <!-- ══════════════════════════════════════════
+				<!-- ══════════════════════════════════════════
            بدنه مقاله
       ══════════════════════════════════════════ -->
-      <div class="post-body" itemprop="articleBody">
+				<div class="post-body" itemprop="articleBody">
+					<p>
+						تصور کنید روز شلوغی از کلینیک دارید: یک متخصص لیزر، چند
+						دستگاه و ده‌ها نوبت که باید مدیریت شوند. حالا یکی از
+						بیماران بدون اطلاع قبلی نمی‌آید. نه فقط یک ساعت تلف شده
+						— یعنی درآمدی از دست رفته که هیچ‌وقت برنمی‌گردد. مشکل
+						اینجاست که این اتفاق برای اغلب کلینیک‌های ایران هنوز یک
+						روال روزانه است. اما راه‌حل وجود دارد و خیلی ساده‌تر از
+						چیزی‌ست که فکرش را می‌کنید.
+					</p>
 
-        <p>
-          تصور کنید روز شلوغی از کلینیک دارید: یک متخصص لیزر، چند دستگاه و ده‌ها نوبت که باید مدیریت شوند. حالا یکی از بیماران بدون اطلاع قبلی نمی‌آید. نه فقط یک ساعت تلف شده — یعنی درآمدی از دست رفته که هیچ‌وقت برنمی‌گردد. مشکل اینجاست که این اتفاق برای اغلب کلینیک‌های ایران هنوز یک روال روزانه است. اما راه‌حل وجود دارد و خیلی ساده‌تر از چیزی‌ست که فکرش را می‌کنید.
-        </p>
+					<h2>چرا نوبت‌دهی سنتی کافی نیست؟</h2>
 
-        <h2>چرا نوبت‌دهی سنتی کافی نیست؟</h2>
+					<p>
+						روش قدیمی نوبت‌دهی — دفتر کاغذی یا حتی یک جدول اکسل —
+						برای کلینیک امروزی دیگر جواب نمی‌دهد. وقتی تعداد بیماران
+						بالا می‌رود، یک منشی به‌تنهایی نمی‌تواند همه تماس‌ها را
+						مدیریت کند، نوبت‌های تکراری را پیدا کند، یادآوری‌ها را
+						بفرستد و همزمان جواب بیمارانی را که دم در ایستاده‌اند
+						بدهد.
+					</p>
 
-        <p>
-          روش قدیمی نوبت‌دهی — دفتر کاغذی یا حتی یک جدول اکسل — برای کلینیک امروزی دیگر جواب نمی‌دهد. وقتی تعداد بیماران بالا می‌رود، یک منشی به‌تنهایی نمی‌تواند همه تماس‌ها را مدیریت کند، نوبت‌های تکراری را پیدا کند، یادآوری‌ها را بفرستد و همزمان جواب بیمارانی را که دم در ایستاده‌اند بدهد.
-        </p>
+					<p>
+						علاوه بر این، بیماران امروز انتظار دارند که نوبت‌شان را
+						آنلاین بگیرند — هر وقت که بخواهند، حتی ساعت یازده شب.
+						اگر این امکان را ندهید، احتمال دارد به کلینیک رقیب بروند
+						که سیستم راحت‌تری دارد. نوبت‌دهی دیجیتال دیگر یک مزیت
+						رقابتی نیست؛ یک ضرورت است.
+					</p>
 
-        <p>
-          علاوه بر این، بیماران امروز انتظار دارند که نوبت‌شان را آنلاین بگیرند — هر وقت که بخواهند، حتی ساعت یازده شب. اگر این امکان را ندهید، احتمال دارد به کلینیک رقیب بروند که سیستم راحت‌تری دارد. نوبت‌دهی دیجیتال دیگر یک مزیت رقابتی نیست؛ یک ضرورت است.
-        </p>
+					<h2>یادآوری پیامکی؛ ساده اما قدرتمند</h2>
 
-        <h2>یادآوری پیامکی؛ ساده اما قدرتمند</h2>
+					<p>
+						یکی از موثرترین ابزارهایی که یک سیستم نوبت‌دهی حرفه‌ای
+						در اختیار شما می‌گذارد، ارسال خودکار یادآوری پیامکی است.
+						این قابلیت به ظاهر ساده، تأثیر شگفت‌انگیزی روی کلینیک
+						شما دارد:
+					</p>
 
-        <p>
-          یکی از موثرترین ابزارهایی که یک سیستم نوبت‌دهی حرفه‌ای در اختیار شما می‌گذارد، ارسال خودکار یادآوری پیامکی است. این قابلیت به ظاهر ساده، تأثیر شگفت‌انگیزی روی کلینیک شما دارد:
-        </p>
+					<ul>
+						<li>
+							<strong>کاهش چشمگیر غیبت بیماران:</strong> بیماری که
+							پیامک یادآوری دریافت می‌کند، احتمال فراموش کردن
+							نوبتش به شدت کاهش می‌یابد.
+						</li>
+						<li>
+							<strong>آزاد شدن وقت منشی:</strong> به جای تماس
+							تلفنی دستی با ده‌ها بیمار، سیستم این کار را به طور
+							خودکار انجام می‌دهد.
+						</li>
+						<li>
+							<strong>فرصت لغو به‌موقع:</strong> بیمارانی که
+							نمی‌توانند بیایند، از طریق پیامک اعلام می‌کنند و شما
+							فرصت پر کردن آن نوبت را دارید.
+						</li>
+						<li>
+							<strong>تجربه بهتر برای بیمار:</strong> بیماری که
+							احساس می‌کند به او اهمیت داده می‌شود، وفادارتر
+							می‌ماند و شما را به دیگران معرفی می‌کند.
+						</li>
+						<li>
+							<strong>پیامک‌های تبلیغاتی هدفمند:</strong>
+							می‌توانید به بیمارانی که مدتی نیامده‌اند پیشنهاد
+							ویژه بفرستید و آن‌ها را برگردانید.
+						</li>
+					</ul>
 
-        <ul>
-          <li><strong>کاهش چشمگیر غیبت بیماران:</strong> بیماری که پیامک یادآوری دریافت می‌کند، احتمال فراموش کردن نوبتش به شدت کاهش می‌یابد.</li>
-          <li><strong>آزاد شدن وقت منشی:</strong> به جای تماس تلفنی دستی با ده‌ها بیمار، سیستم این کار را به طور خودکار انجام می‌دهد.</li>
-          <li><strong>فرصت لغو به‌موقع:</strong> بیمارانی که نمی‌توانند بیایند، از طریق پیامک اعلام می‌کنند و شما فرصت پر کردن آن نوبت را دارید.</li>
-          <li><strong>تجربه بهتر برای بیمار:</strong> بیماری که احساس می‌کند به او اهمیت داده می‌شود، وفادارتر می‌ماند و شما را به دیگران معرفی می‌کند.</li>
-          <li><strong>پیامک‌های تبلیغاتی هدفمند:</strong> می‌توانید به بیمارانی که مدتی نیامده‌اند پیشنهاد ویژه بفرستید و آن‌ها را برگردانید.</li>
-        </ul>
+					<blockquote>
+						<p>
+							مطالعات نشان می‌دهد که ارسال یادآوری پیامکی ۲۴ ساعت
+							قبل از نوبت، میزان غیبت بیماران را تا ۳۸٪ کاهش
+							می‌دهد — یعنی برای هر ۱۰ نوبت، حدود ۴ نوبت بیشتر پر
+							می‌ماند.
+						</p>
+					</blockquote>
 
-        <blockquote>
-          <p>مطالعات نشان می‌دهد که ارسال یادآوری پیامکی ۲۴ ساعت قبل از نوبت، میزان غیبت بیماران را تا ۳۸٪ کاهش می‌دهد — یعنی برای هر ۱۰ نوبت، حدود ۴ نوبت بیشتر پر می‌ماند.</p>
-        </blockquote>
+					<h2>ویژگی‌های یک سیستم نوبت‌دهی حرفه‌ای</h2>
 
-        <h2>ویژگی‌های یک سیستم نوبت‌دهی حرفه‌ای</h2>
+					<p>
+						هر نرم‌افزار نوبت‌دهی‌ای به درد کلینیک لیزر نمی‌خورد.
+						باید بدانید چه چیزی را می‌خرید. یک سیستم حرفه‌ای باید
+						موارد زیر را داشته باشد:
+					</p>
 
-        <p>
-          هر نرم‌افزار نوبت‌دهی‌ای به درد کلینیک لیزر نمی‌خورد. باید بدانید چه چیزی را می‌خرید. یک سیستم حرفه‌ای باید موارد زیر را داشته باشد:
-        </p>
+					<ul>
+						<li>
+							<strong>نوبت‌دهی آنلاین ۲۴/۷:</strong> بیمار بدون
+							تماس تلفنی، هر ساعتی از شبانه‌روز نوبت بگیرد.
+						</li>
+						<li>
+							<strong>یادآوری خودکار پیامکی:</strong> ارسال
+							یادآوری چند ساعت یا یک روز قبل از نوبت، به صورت
+							کاملاً خودکار.
+						</li>
+						<li>
+							<strong>مدیریت تقویم پزشکان و دستگاه‌ها:</strong>
+							نمایش ظرفیت هر متخصص و هر دستگاه به صورت جداگانه.
+						</li>
+						<li>
+							<strong>سابقه کامل بیمار:</strong> دسترسی سریع به
+							تاریخچه درمان، تعداد جلسات گذشته و یادداشت‌های
+							پزشکی.
+						</li>
+						<li>
+							<strong>گزارش‌گیری هوشمند:</strong> بدانید کدام
+							ساعت‌ها پرترافیک‌تر هستند و برنامه کلینیک را بر اساس
+							آن بچینید.
+						</li>
+						<li>
+							<strong>یکپارچگی با حسابداری:</strong> نوبت‌ها
+							مستقیماً به فاکتور و پرداخت وصل شوند.
+						</li>
+					</ul>
 
-        <ul>
-          <li><strong>نوبت‌دهی آنلاین ۲۴/۷:</strong> بیمار بدون تماس تلفنی، هر ساعتی از شبانه‌روز نوبت بگیرد.</li>
-          <li><strong>یادآوری خودکار پیامکی:</strong> ارسال یادآوری چند ساعت یا یک روز قبل از نوبت، به صورت کاملاً خودکار.</li>
-          <li><strong>مدیریت تقویم پزشکان و دستگاه‌ها:</strong> نمایش ظرفیت هر متخصص و هر دستگاه به صورت جداگانه.</li>
-          <li><strong>سابقه کامل بیمار:</strong> دسترسی سریع به تاریخچه درمان، تعداد جلسات گذشته و یادداشت‌های پزشکی.</li>
-          <li><strong>گزارش‌گیری هوشمند:</strong> بدانید کدام ساعت‌ها پرترافیک‌تر هستند و برنامه کلینیک را بر اساس آن بچینید.</li>
-          <li><strong>یکپارچگی با حسابداری:</strong> نوبت‌ها مستقیماً به فاکتور و پرداخت وصل شوند.</li>
-        </ul>
+					<h2>نوبت‌دهی آنلاین و اعتماد بیماران</h2>
 
-        <h2>نوبت‌دهی آنلاین و اعتماد بیماران</h2>
+					<p>
+						وقتی بیمار می‌تواند از گوشی‌اش نوبت بگیرد، تأییدیه آنی
+						دریافت کند و چند ساعت قبل از جلسه یادآوری بگیرد، یک پیام
+						روشن دریافت می‌کند:
+						<strong>این کلینیک حرفه‌ای است.</strong>
+					</p>
 
-        <p>
-          وقتی بیمار می‌تواند از گوشی‌اش نوبت بگیرد، تأییدیه آنی دریافت کند و چند ساعت قبل از جلسه یادآوری بگیرد، یک پیام روشن دریافت می‌کند: <strong>این کلینیک حرفه‌ای است.</strong>
-        </p>
+					<p>
+						در بازار رقابتی کلینیک‌های لیزر و زیبایی، اعتماد اولیه
+						همه چیز است. بسیاری از بیماران قبل از اولین مراجعه،
+						تجربه دیجیتال شما را می‌سنجند — وب‌سایت، نحوه نوبت‌دهی،
+						سرعت پاسخ‌دهی. سیستم نوبت‌دهی آنلاین، اولین نقطه تماس
+						بیمار با کلینیک شماست و می‌تواند تصمیم‌گیری او را تغییر
+						دهد.
+					</p>
 
-        <p>
-          در بازار رقابتی کلینیک‌های لیزر و زیبایی، اعتماد اولیه همه چیز است. بسیاری از بیماران قبل از اولین مراجعه، تجربه دیجیتال شما را می‌سنجند — وب‌سایت، نحوه نوبت‌دهی، سرعت پاسخ‌دهی. سیستم نوبت‌دهی آنلاین، اولین نقطه تماس بیمار با کلینیک شماست و می‌تواند تصمیم‌گیری او را تغییر دهد.
-        </p>
+					<h2>داشبورد روزانه: یک نگاه، همه چیز</h2>
 
-        <h2>داشبورد روزانه: یک نگاه، همه چیز</h2>
+					<p>
+						یک مدیر خوب کلینیک باید هر روز صبح با یک نگاه بداند: چند
+						نوبت دارد، چه درآمدی انتظار دارد، کدام دستگاه‌ها استفاده
+						می‌شوند و آیا موجودی مواد مصرفی کافی است. داشبورد روزانه
+						دکتر لیزر دقیقاً همین را به شما می‌دهد.
+					</p>
 
-        <p>
-          یک مدیر خوب کلینیک باید هر روز صبح با یک نگاه بداند: چند نوبت دارد، چه درآمدی انتظار دارد، کدام دستگاه‌ها استفاده می‌شوند و آیا موجودی مواد مصرفی کافی است. داشبورد روزانه دکتر لیزر دقیقاً همین را به شما می‌دهد.
-        </p>
+					<p>
+						با داشبورد هوشمند، دیگر لازم نیست بین چند نرم‌افزار
+						مختلف جابه‌جا شوید. نوبت‌ها، حسابداری، انبار و ارتباط با
+						بیمار — همه در یک صفحه، به شکل ساده و قابل‌فهم. این یعنی
+						تصمیم‌گیری سریع‌تر، خطاهای کمتر و کلینیکی که مثل ساعت
+						کار می‌کند.
+					</p>
 
-        <p>
-          با داشبورد هوشمند، دیگر لازم نیست بین چند نرم‌افزار مختلف جابه‌جا شوید. نوبت‌ها، حسابداری، انبار و ارتباط با بیمار — همه در یک صفحه، به شکل ساده و قابل‌فهم. این یعنی تصمیم‌گیری سریع‌تر، خطاهای کمتر و کلینیکی که مثل ساعت کار می‌کند.
-        </p>
+					<p>
+						اگر می‌خواهید کلینیک لیزر یا زیبایی‌تان را به سطح بعدی
+						ببرید، دکتر لیزر یک سیستم مدیریتی کامل است که نوبت‌دهی
+						هوشمند، یادآوری پیامکی، حسابداری و انبارداری را زیر یک
+						سقف جمع کرده. همین الان با
+						<a href="https://doctor-laser.ir">پلن رایگان</a> شروع
+						کنید و تفاوت را از روز اول احساس کنید.
+					</p>
+				</div>
+				<!-- /.post-body -->
+			</article>
+		</main>
 
-        <p>
-          اگر می‌خواهید کلینیک لیزر یا زیبایی‌تان را به سطح بعدی ببرید، دکتر لیزر یک سیستم مدیریتی کامل است که نوبت‌دهی هوشمند، یادآوری پیامکی، حسابداری و انبارداری را زیر یک سقف جمع کرده. همین الان با <a href="https://doctor-laser.ir">پلن رایگان</a> شروع کنید و تفاوت را از روز اول احساس کنید.
-        </p>
-
-      </div><!-- /.post-body -->
-
-    </article>
-  </main>
-
-  <!-- ══════════════════════════════════════════════
+		<!-- ══════════════════════════════════════════════
        فوتر
   ══════════════════════════════════════════════ -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
+		<footer class="site-footer" role="contentinfo">
+			<div class="container">
+				<a
+					href="../index.html"
+					class="site-footer__logo"
+					aria-label="دکتر لیزر — صفحه اصلی"
+				>
+					<svg
+						width="28"
+						height="28"
+						viewBox="0 0 38 38"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						aria-hidden="true"
+					>
+						<defs>
+							<linearGradient
+								id="butterfly-grad-footer-post1"
+								x1="0"
+								y1="0"
+								x2="38"
+								y2="38"
+								gradientUnits="userSpaceOnUse"
+							>
+								<stop offset="0%" stop-color="#9534C5" />
+								<stop offset="100%" stop-color="#e8457a" />
+							</linearGradient>
+						</defs>
+						<path
+							d="M19 19 C19 19 6 14 4 6 C3 2 7 1 10 3 C13 5 17 12 19 19Z"
+							fill="url(#butterfly-grad-footer-post1)"
+							opacity="0.9"
+						/>
+						<path
+							d="M19 19 C19 19 32 14 34 6 C35 2 31 1 28 3 C25 5 21 12 19 19Z"
+							fill="url(#butterfly-grad-footer-post1)"
+							opacity="0.9"
+						/>
+						<path
+							d="M19 19 C19 19 7 24 5 31 C4 35 8 37 11 35 C14 33 17 26 19 19Z"
+							fill="url(#butterfly-grad-footer-post1)"
+							opacity="0.7"
+						/>
+						<path
+							d="M19 19 C19 19 31 24 33 31 C34 35 30 37 27 35 C24 33 21 26 19 19Z"
+							fill="url(#butterfly-grad-footer-post1)"
+							opacity="0.7"
+						/>
+						<ellipse
+							cx="19"
+							cy="19"
+							rx="1.8"
+							ry="7"
+							fill="#7a28a8"
+						/>
+					</svg>
+					<span class="site-footer__logo-name">دکتر لیزر</span>
+				</a>
 
-      <a href="../index.html" class="site-footer__logo" aria-label="دکتر لیزر — صفحه اصلی">
-        <svg width="28" height="28" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="butterfly-grad-footer-post1" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-              <stop offset="0%"   stop-color="#9534C5"/>
-              <stop offset="100%" stop-color="#e8457a"/>
-            </linearGradient>
-          </defs>
-          <path d="M19 19 C19 19 6 14 4 6 C3 2 7 1 10 3 C13 5 17 12 19 19Z"  fill="url(#butterfly-grad-footer-post1)" opacity="0.9"/>
-          <path d="M19 19 C19 19 32 14 34 6 C35 2 31 1 28 3 C25 5 21 12 19 19Z" fill="url(#butterfly-grad-footer-post1)" opacity="0.9"/>
-          <path d="M19 19 C19 19 7 24 5 31 C4 35 8 37 11 35 C14 33 17 26 19 19Z" fill="url(#butterfly-grad-footer-post1)" opacity="0.7"/>
-          <path d="M19 19 C19 19 31 24 33 31 C34 35 30 37 27 35 C24 33 21 26 19 19Z" fill="url(#butterfly-grad-footer-post1)" opacity="0.7"/>
-          <ellipse cx="19" cy="19" rx="1.8" ry="7" fill="#7a28a8"/>
-        </svg>
-        <span class="site-footer__logo-name">دکتر لیزر</span>
-      </a>
+				<nav class="site-footer__links" aria-label="ناوبری فوتر">
+					<a href="https://doctor-laser.ir">خانه</a>
+					<a href="../index.html">وبلاگ</a>
+					<a href="https://doctor-laser.ir#about">درباره ما</a>
+					<a href="https://doctor-laser.ir#services">خدمات</a>
+					<a href="https://doctor-laser.ir#contact">تماس با ما</a>
+					<a href="https://doctor-laser.ir">شروع رایگان</a>
+				</nav>
 
-      <nav class="site-footer__links" aria-label="ناوبری فوتر">
-        <a href="https://doctor-laser.ir">خانه</a>
-        <a href="../index.html">وبلاگ</a>
-        <a href="https://doctor-laser.ir#about">درباره ما</a>
-        <a href="https://doctor-laser.ir#services">خدمات</a>
-        <a href="https://doctor-laser.ir#contact">تماس با ما</a>
-        <a href="https://doctor-laser.ir">شروع رایگان</a>
-      </nav>
+				<span class="site-footer__divider" aria-hidden="true"></span>
 
-      <span class="site-footer__divider" aria-hidden="true"></span>
+				<p class="site-footer__copy">
+					&copy; ۱۴۰۴ دکتر لیزر. تمامی حقوق محفوظ است.
+				</p>
+			</div>
+		</footer>
 
-      <p class="site-footer__copy">
-        &copy; ۱۴۰۴ دکتر لیزر. تمامی حقوق محفوظ است.
-      </p>
-
-    </div>
-  </footer>
-
-  <!-- منوی موبایل -->
-  <script>
-    (function () {
-      var toggle = document.getElementById("nav-toggle");
-      var menu   = document.getElementById("nav-menu");
-      if (!toggle || !menu) return;
-      toggle.addEventListener("click", function () {
-        var isOpen = menu.classList.toggle("nav__menu--open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
-        toggle.classList.toggle("nav-toggle--open", isOpen);
-      });
-      document.addEventListener("click", function (e) {
-        if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-          menu.classList.remove("nav__menu--open");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.classList.remove("nav-toggle--open");
-        }
-      });
-    })();
-  </script>
-
-</body>
+		<!-- منوی موبایل -->
+		<script>
+			(function () {
+				var toggle = document.getElementById("nav-toggle");
+				var menu = document.getElementById("nav-menu");
+				if (!toggle || !menu) return;
+				toggle.addEventListener("click", function () {
+					var isOpen = menu.classList.toggle("nav__menu--open");
+					toggle.setAttribute("aria-expanded", String(isOpen));
+					toggle.classList.toggle("nav-toggle--open", isOpen);
+				});
+				document.addEventListener("click", function (e) {
+					if (
+						!toggle.contains(e.target) &&
+						!menu.contains(e.target)
+					) {
+						menu.classList.remove("nav__menu--open");
+						toggle.setAttribute("aria-expanded", "false");
+						toggle.classList.remove("nav-toggle--open");
+					}
+				});
+			})();
+		</script>
+	</body>
 </html>
