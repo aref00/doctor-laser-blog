@@ -1,0 +1,842 @@
+/* =====================================================================
+   دکتر لیزر — Blog Styles
+   فونت: IRANSansXV (متغیر، لوکال)
+   جهت: RTL — فارسی
+   ===================================================================== */
+
+/* ── فونت لوکال ────────────────────────────────────────────────────── */
+@font-face {
+    font-family: "IRANSansXV";
+    src:
+        url("./fonts/IRANSansXV.woff2") format("woff2"),
+        url("./fonts/IRANSansXV.woff") format("woff");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ── متغیرهای CSS ──────────────────────────────────────────────────── */
+:root {
+    --green: #20ce66;
+    --green-dark: #18a852;
+    --green-light: #e8faf1;
+    --purple: #9534c5;
+    --purple-dark: #7a28a8;
+    --purple-light: #f5eafc;
+    --dark: #1c1c28;
+    --dark-2: #2c2c3e;
+    --mid: #5a5a72;
+    --muted: #8888a0;
+    --border: #e4e4ef;
+    --light: #f9f9f9;
+    --white: #ffffff;
+    --teal: #0ea5b0;
+    --rose: #e8457a;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-sm: 0 1px 4px rgba(28, 28, 40, 0.07);
+    --shadow-md: 0 4px 20px rgba(28, 28, 40, 0.1);
+    --shadow-lg: 0 8px 32px rgba(28, 28, 40, 0.14);
+
+    --font: "IRANSansXV", sans-serif;
+    --container: 1120px;
+    --header-h: 68px;
+}
+
+/* ── ریست پایه ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--dark);
+    background: var(--light);
+    direction: rtl;
+    text-align: right;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul,
+ol {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+    font-family: var(--font);
+}
+
+/* دسترس‌پذیری */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ── کانتینر ──────────────────────────────────────────────────────── */
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   هدر
+══════════════════════════════════════════════════════════════════════ */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-h);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.site-header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 16px;
+}
+
+/* لوگو */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    flex-direction: row;
+}
+
+.logo__icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+}
+
+.logo__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.logo__name {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.logo__tagline {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1;
+}
+
+/* منوی ناوبری */
+.nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: row;
+}
+
+.nav__link {
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--mid);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    transition:
+        color 0.18s,
+        background 0.18s;
+}
+
+.nav__link:hover {
+    color: var(--dark);
+    background: var(--light);
+}
+
+.nav__link--active,
+.nav__link[aria-current="page"] {
+    color: var(--purple);
+    font-weight: 700;
+}
+
+.nav__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    background: var(--green);
+    padding: 8px 18px;
+    border-radius: var(--radius-md);
+    border: none;
+    transition:
+        background 0.18s,
+        transform 0.15s,
+        box-shadow 0.18s;
+    box-shadow: 0 2px 10px rgba(32, 206, 102, 0.25);
+}
+
+.nav__cta:hover {
+    background: var(--green-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(32, 206, 102, 0.35);
+}
+
+/* دکمه موبایل */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px;
+}
+.nav-toggle:hover {
+    background: var(--light);
+}
+
+.nav-toggle__bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--dark);
+    border-radius: 2px;
+    transition:
+        transform 0.22s,
+        opacity 0.18s;
+}
+
+.nav-toggle--open .nav-toggle__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle--open .nav-toggle__bar:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle--open .nav-toggle__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   هیرو
+══════════════════════════════════════════════════════════════════════ */
+.hero {
+    background: linear-gradient(
+        135deg,
+        var(--dark) 0%,
+        var(--dark-2) 60%,
+        #3a1a5c 100%
+    );
+    padding: 72px 0 64px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            ellipse 80% 60% at 20% 50%,
+            rgba(149, 52, 197, 0.18) 0%,
+            transparent 65%
+        ),
+        radial-gradient(
+            ellipse 50% 50% at 80% 20%,
+            rgba(32, 206, 102, 0.1) 0%,
+            transparent 60%
+        );
+    pointer-events: none;
+}
+
+.hero__content {
+    position: relative;
+    max-width: 680px;
+}
+
+.hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+}
+
+.hero__eyebrow::before,
+.hero__eyebrow::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--green);
+    opacity: 0.5;
+}
+
+.hero__title {
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.25;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+    font-size: 16.5px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 580px;
+    line-height: 1.8;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   هدر بخش
+══════════════════════════════════════════════════════════════════════ */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 52px 0 32px;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--dark);
+    white-space: nowrap;
+}
+
+.section-header__line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   گرید پست‌ها
+══════════════════════════════════════════════════════════════════════ */
+#posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-bottom: 64px;
+}
+
+/* ── کارت پست ─────────────────────────────────────────────────────── */
+.post-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.post-card__color-bar {
+    display: block;
+    height: 4px;
+    background: var(--green);
+    transition: height 0.2s ease;
+}
+
+.post-card:hover .post-card__color-bar {
+    height: 6px;
+}
+
+.post-card.card--green .post-card__color-bar {
+    background: var(--green);
+}
+.post-card.card--purple .post-card__color-bar {
+    background: var(--purple);
+}
+.post-card.card--teal .post-card__color-bar {
+    background: var(--teal);
+}
+.post-card.card--rose .post-card__color-bar {
+    background: var(--rose);
+}
+
+.post-card__body {
+    padding: 24px 24px 16px;
+    flex: 1;
+}
+
+.post-card__title {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 12px 0 10px;
+    line-height: 1.4;
+}
+
+.post-card__title a {
+    color: inherit;
+}
+.post-card__title a:hover {
+    color: var(--purple);
+}
+
+.post-card__excerpt {
+    font-size: 14.5px;
+    color: var(--mid);
+    line-height: 1.75;
+}
+
+.post-card__footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-direction: row;
+    padding: 12px 24px 18px;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+.post-card__date,
+.post-card__readtime {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+/* ── بج ───────────────────────────────────────────────────────────── */
+.badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+}
+
+.badge--green {
+    background: var(--green-light);
+    color: var(--green-dark);
+}
+
+.badge--purple {
+    background: var(--purple-light);
+    color: var(--purple-dark);
+}
+
+/* خالی بودن پست‌ها */
+.posts-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 64px 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   صفحه پست
+══════════════════════════════════════════════════════════════════════ */
+.post-layout {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+/* مسیر صفحه */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-direction: row;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.breadcrumb a {
+    color: var(--purple);
+    transition: color 0.15s;
+}
+.breadcrumb a:hover {
+    color: var(--purple-dark);
+}
+
+.breadcrumb__sep {
+    color: var(--border);
+    font-size: 16px;
+    /* برای RTL جهت جداکننده */
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+/* هدر پست */
+.post-header {
+    margin-bottom: 36px;
+}
+
+.post-header .badge {
+    margin-bottom: 16px;
+}
+
+.post-header__title {
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: 900;
+    color: var(--dark);
+    line-height: 1.3;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.post-header__meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--border);
+}
+
+.post-header__meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ── بدنه پست ─────────────────────────────────────────────────────── */
+.post-body {
+    font-size: 16.5px;
+    line-height: 1.9;
+    color: var(--dark-2);
+}
+
+.post-body > * + * {
+    margin-top: 1.4em;
+}
+
+.post-body p {
+    color: #38384e;
+}
+
+.post-body h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-top: 2.2em;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.4em;
+    border-bottom: 2px solid var(--green);
+    display: inline-block;
+}
+
+.post-body h2:first-child {
+    margin-top: 0;
+}
+
+.post-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-top: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+.post-body ul,
+.post-body ol {
+    padding-right: 12px;
+    padding-left: 0;
+}
+
+.post-body ul {
+    list-style: none;
+}
+
+.post-body ul li {
+    position: relative;
+    padding-right: 22px;
+    margin-bottom: 0.5em;
+    color: #38384e;
+}
+
+.post-body ul li + li {
+    margin-top: 0.4em;
+}
+
+.post-body ul li::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0.65em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+.post-body ol {
+    list-style: decimal;
+    padding-right: 24px;
+}
+
+.post-body ol li {
+    padding-right: 6px;
+    margin-bottom: 0.5em;
+    color: #38384e;
+}
+
+.post-body ol li + li {
+    margin-top: 0.4em;
+}
+
+.post-body ol li::marker {
+    color: var(--green-dark);
+    font-weight: 700;
+}
+
+.post-body strong {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.post-body em {
+    font-style: italic;
+}
+
+.post-body a {
+    color: var(--purple);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s;
+}
+
+.post-body a:hover {
+    color: var(--purple-dark);
+}
+
+.post-body blockquote {
+    margin: 2em 0;
+    padding: 20px 24px;
+    background: var(--purple-light);
+    border-right: 4px solid var(--purple);
+    border-left: none;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.post-body blockquote p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--purple-dark);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.post-body blockquote p::before {
+    content: "\201C";
+}
+.post-body blockquote p::after {
+    content: "\201D";
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   فوتر
+══════════════════════════════════════════════════════════════════════ */
+.site-footer {
+    background: var(--dark);
+    color: rgba(255, 255, 255, 0.65);
+    padding: 48px 0 36px;
+}
+
+.site-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.site-footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.site-footer__logo-name {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.site-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 20px;
+    flex-direction: row;
+}
+
+.site-footer__links a {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.15s;
+}
+
+.site-footer__links a:hover {
+    color: var(--white);
+}
+
+.site-footer__copy {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.site-footer__divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   ریسپانسیو
+══════════════════════════════════════════════════════════════════════ */
+@media (min-width: 640px) {
+    #posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #posts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .post-layout {
+        padding: 48px 0 96px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav__menu {
+        display: none;
+        position: absolute;
+        top: var(--header-h);
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+        padding: 16px 24px 24px;
+        gap: 4px;
+    }
+
+    .nav__menu--open {
+        display: flex;
+    }
+
+    .nav__link {
+        width: 100%;
+        padding: 10px 16px;
+    }
+
+    .nav__cta {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+        padding: 12px;
+    }
+
+    .hero {
+        padding: 48px 0 44px;
+    }
+
+    .section-header {
+        margin: 36px 0 24px;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   چاپ
+══════════════════════════════════════════════════════════════════════ */
+@media print {
+    .site-header,
+    .site-footer,
+    .nav-toggle,
+    .breadcrumb {
+        display: none;
+    }
+
+    .post-layout {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .post-body h2 {
+        break-after: avoid;
+    }
+}
