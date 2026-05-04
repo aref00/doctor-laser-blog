@@ -356,7 +356,7 @@
 					<span class="error-404__divider"></span>
 
 					<div class="error-404__actions">
-						<a href="/" class="btn btn--primary">
+						<a href="/blog" class="btn btn--primary">
 							<span class="icon-emoji">🏠</span> بازگشت به وبلاگ
 						</a>
 						<a
@@ -372,7 +372,7 @@
 					<div class="error-404__search" role="search">
 						<form
 							id="quick-search-form"
-							action="/"
+							action="/blog"
 							method="get"
 							class="search-blog"
 						>
@@ -394,7 +394,7 @@
 							در دکتر لیزر
 						</div>
 						<ul class="suggestions-grid" role="list">
-							<li><a href="/">🏆 همه مقالات وبلاگ</a></li>
+							<li><a href="/blog">🏆 همه مقالات وبلاگ</a></li>
 							<li>
 								<a href="https://doctor-laser.ir/clinics"
 									>🏥 کلینیک‌های همکار</a
@@ -530,10 +530,10 @@
 						let query = searchInput.value.trim();
 						if (query !== "") {
 							// هدایت به صفحه اصلی وبلاگ همراه با پارامتر جستجو (blog.js از ?search= استفاده می‌کند)
-							window.location.href = `/?search=${encodeURIComponent(query)}`;
+							window.location.href = `/blog/?search=${encodeURIComponent(query)}`;
 						} else {
 							// اگر جستجو خالی بود به صفحه اصلی برو
-							window.location.href = "/";
+							window.location.href = "/blog/";
 						}
 					});
 				}
