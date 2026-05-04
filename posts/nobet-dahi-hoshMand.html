@@ -9,6 +9,49 @@
 		/>
 		<title>نوبت‌دهی هوشمند | وبلاگ دکتر لیزر</title>
 		<link rel="stylesheet" href="../style.css" />
+		<style>
+			/* اضافه کردن استایل‌های پشتیبانی برای نمایش بهتر تصاویر در صورت نبودن style.css اصلی */
+			.post-body img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin: 2rem auto;
+				border-radius: 1.5rem;
+				box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+				transition:
+					transform 0.2s ease,
+					box-shadow 0.2s ease;
+			}
+			.post-body img:hover {
+				transform: scale(1.01);
+				box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.15);
+			}
+			.post-body figure {
+				margin: 2rem 0;
+			}
+			.post-body figcaption {
+				text-align: center;
+				font-size: 0.85rem;
+				color: #4b5563;
+				margin-top: 0.75rem;
+				font-weight: 400;
+			}
+			.inline-icon {
+				vertical-align: middle;
+				margin-left: 0.25rem;
+			}
+			.feature-grid-img {
+				background: #f9f5ff;
+				border-radius: 1rem;
+				padding: 0.5rem;
+			}
+			@media (max-width: 640px) {
+				.post-body img {
+					border-radius: 1rem;
+					margin: 1.5rem auto;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<!-- ══════════════════════════════════════════════
@@ -23,6 +66,7 @@
 						src="/blog/assets/logo.svg"
 						width="48px"
 						height="48px"
+						alt="لوگو دکتر لیزر"
 					/>
 
 					<span class="logo__text">
@@ -166,7 +210,7 @@
 				</header>
 
 				<!-- ══════════════════════════════════════════
-           بدنه مقاله
+           بدنه مقاله + تصاویر مرتبط
       ══════════════════════════════════════════ -->
 				<div class="post-body" itemprop="articleBody">
 					<p>
@@ -178,6 +222,19 @@
 						روال روزانه است. اما راه‌حل وجود دارد و خیلی ساده‌تر از
 						چیزی‌ست که فکرش را می‌کنید.
 					</p>
+
+					<!-- تصویر: کلینیک مدرن و تکنولوژی نوبت‌دهی -->
+					<figure>
+						<img
+							src="https://placehold.co/800x450/EEE5FF/8B5CF6?text=کلینیک+هوشمند+دکتر+لیزر"
+							alt="کلینیک لیزر مدرن با سیستم نوبت‌دهی دیجیتال"
+							loading="lazy"
+						/>
+						<figcaption>
+							مدیریت هوشمند نوبت‌دهی، تحولی بزرگ برای کلینیک‌های
+							زیبایی و لیزر مدرن
+						</figcaption>
+					</figure>
 
 					<h2>چرا نوبت‌دهی سنتی کافی نیست؟</h2>
 
@@ -197,6 +254,19 @@
 						که سیستم راحت‌تری دارد. نوبت‌دهی دیجیتال دیگر یک مزیت
 						رقابتی نیست؛ یک ضرورت است.
 					</p>
+
+					<!-- تصویر مقایسه سنتی و مدرن (نمودار یا اینفوگرافیک مفهومی) -->
+					<figure>
+						<img
+							src="https://placehold.co/800x400/F3E8FF/7C3AED?text=دفتر+کاغذی+در+مقابل+نرم‌افزار+نوبت‌دهی"
+							alt="مقایسه سیستم سنتی (کاغذی) و سیستم نوین نوبت دهی دکتر لیزر"
+							loading="lazy"
+						/>
+						<figcaption>
+							سیستم‌های سنتی در مقابل نوبت‌دهی هوشمند دیجیتال؛
+							کاهش خطا و افزایش رضایت بیمار
+						</figcaption>
+					</figure>
 
 					<h2>یادآوری پیامکی؛ ساده اما قدرتمند</h2>
 
@@ -234,6 +304,19 @@
 							ویژه بفرستید و آن‌ها را برگردانید.
 						</li>
 					</ul>
+
+					<!-- تصویر یادآوری پیامکی و موبایل -->
+					<figure>
+						<img
+							src="https://placehold.co/700x500/FFFFFF/6D28D9?text=یادآوری+پیامکی+هوشمند"
+							alt="نمایش پیامک یادآوری نوبت روی گوشی موبایل"
+							loading="lazy"
+						/>
+						<figcaption>
+							ارسال خودکار پیامک یادآوری ۲۴ ساعت قبل از نوبت؛ غیبت
+							بیماران را تا ۳۸ درصد کاهش دهید.
+						</figcaption>
+					</figure>
 
 					<blockquote>
 						<p>
@@ -282,6 +365,19 @@
 						</li>
 					</ul>
 
+					<!-- تصویر داشبورد نرم‌افزار مدیریت کلینیک -->
+					<figure>
+						<img
+							src="https://placehold.co/850x480/ECFDF5/059669?text=داشبورد+مدیریت+کلینیک+لیزر"
+							alt="داشبورد مدیریتی دکتر لیزر شامل تقویم، نوبت‌ها و گزارشات"
+							loading="lazy"
+						/>
+						<figcaption>
+							داشبورد هوشمند دکتر لیزر: مدیریت نوبت، مالی و پذیرش
+							در یک نگاه
+						</figcaption>
+					</figure>
+
 					<h2>نوبت‌دهی آنلاین و اعتماد بیماران</h2>
 
 					<p>
@@ -300,6 +396,19 @@
 						دهد.
 					</p>
 
+					<!-- تصویر بیمار در حال رزرو آنلاین نوبت از موبایل -->
+					<figure>
+						<img
+							src="https://placehold.co/700x466/FFF7ED/F97316?text=رزرو+آنلاین+نوبت+از+موبایل"
+							alt="بیماری که با گوشی موبایل خود نوبت کلینیک را آنلاین رزرو میکند"
+							loading="lazy"
+						/>
+						<figcaption>
+							نوبت‌دهی آنلاین در ۲۴ ساعت شبانه‌روز، تجربه حرفه‌ای
+							برای بیماران مدرن
+						</figcaption>
+					</figure>
+
 					<h2>داشبورد روزانه: یک نگاه، همه چیز</h2>
 
 					<p>
@@ -317,6 +426,18 @@
 						کار می‌کند.
 					</p>
 
+					<!-- تصویر خلاصه اینفوگرافیک مزایا (جذابیت بصری) -->
+					<figure>
+						<img
+							src="https://placehold.co/850x420/F8FAFC/1E293B?text=هفت+مزیت+نوبت‌دهی+هوشمند"
+							alt="اینفوگرافیک ۷ مزیت کلیدی نوبت دهی هوشمند دکتر لیزر: کاهش غیبت، صرفه جویی در زمان، افزایش درآمد"
+							loading="lazy"
+						/>
+						<figcaption>
+							۷ مزیت کلیدی سیستم مدیریت کلینیک دکتر لیزر
+						</figcaption>
+					</figure>
+
 					<p>
 						اگر می‌خواهید کلینیک لیزر یا زیبایی‌تان را به سطح بعدی
 						ببرید، دکتر لیزر یک سیستم مدیریتی کامل است که نوبت‌دهی
@@ -327,6 +448,16 @@
 						>
 						شروع کنید و تفاوت را از روز اول احساس کنید.
 					</p>
+
+					<!-- تصویر دعوت به اقدام (call-to-action) مرتبط با ثبت‌نام رایگان -->
+					<figure>
+						<img
+							src="https://placehold.co/750x200/6D28D9/FFFFFF?text=شروع+رایگان+دکتر+لیزر+همین+امروز"
+							alt="بنر شروع رایگان سیستم مدیریت کلینیک دکتر لیزر"
+							loading="lazy"
+							style="max-width: 550px"
+						/>
+					</figure>
 				</div>
 				<!-- /.post-body -->
 			</article>
@@ -346,6 +477,7 @@
 						src="/blog/assets/logo.svg"
 						width="38px"
 						height="38px"
+						alt="لوگو دکتر لیزر"
 					/>
 					<span class="site-footer__logo-name">دکتر لیزر</span>
 				</a>
