@@ -49,7 +49,7 @@
 		var variant = CARD_VARIANTS[index % CARD_VARIANTS.length];
 		var badge = BADGE_VARIANTS[index % BADGE_VARIANTS.length];
 		var href = "posts/" + escapeHtml(post.slug);
-		var image = "posts/" + escapeHtml(post.slug) + escapeHtml(post.image || "");
+		var image = "posts/" + escapeHtml(post.slug) + "/" + escapeHtml(post.image || "");
 		var title = escapeHtml(post.title);
 		var category = escapeHtml(post.category);
 		var excerpt = escapeHtml(post.excerpt);
