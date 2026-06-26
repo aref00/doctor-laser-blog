@@ -49,6 +49,7 @@
 		var variant = CARD_VARIANTS[index % CARD_VARIANTS.length];
 		var badge = BADGE_VARIANTS[index % BADGE_VARIANTS.length];
 		var href = "posts/" + escapeHtml(post.slug);
+		var image = "posts/" + escapeHtml(post.slug) + escapeHtml(post.image || "");
 		var title = escapeHtml(post.title);
 		var category = escapeHtml(post.category);
 		var excerpt = escapeHtml(post.excerpt);
@@ -62,6 +63,21 @@
 			'<a href="' +
 			href +
 			'" class="post-card__color-bar" aria-hidden="true" tabindex="-1"></a>' +
+
+			(post.image
+				? '<a href="' +
+				href +
+				'" class="post-card__image-link" aria-label="' +
+				title +
+				'">' +
+				'<img class="post-card__image" src="' +
+				image +
+				'" alt="' +
+				title +
+				'" loading="lazy" />' +
+				"</a>"
+				: "") +
+
 			'<div class="post-card__body">' +
 			'<span class="badge ' +
 			badge +
@@ -93,19 +109,20 @@
 			"</span>" +
 			(readTime
 				? '<span class="post-card__readtime">' +
-					'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-					'<circle cx="12" cy="12" r="10"/>' +
-					'<polyline points="12 6 12 12 16 14"/>' +
-					"</svg>" +
-					"<span>" +
-					readTime +
-					"</span>" +
-					"</span>"
+				'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+				'<circle cx="12" cy="12" r="10"/>' +
+				'<polyline points="12 6 12 12 16 14"/>' +
+				"</svg>" +
+				"<span>" +
+				readTime +
+				"</span>" +
+				"</span>"
 				: "") +
 			"</footer>" +
 			"</article>"
 		);
 	}
+
 
 	/* ── منوی موبایل ─────────────────────────────────────────────────── */
 
