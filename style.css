@@ -393,7 +393,7 @@ button {
 .post-card__image-link {
 	display: block;
 	overflow: hidden;
-	border-radius: var(--radius-md) var(--radius-md) 0 0;
+	/* border-radius: var(--radius-md) var(--radius-md) 0 0; */
 }
 
 .post-card__image {
