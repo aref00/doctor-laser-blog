@@ -390,6 +390,20 @@ button {
     box-shadow: var(--shadow-lg);
 }
 
+.post-card__image-link {
+	display: block;
+	overflow: hidden;
+	border-radius: 16px 16px 0 0;
+}
+
+.post-card__image {
+	display: block;
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+}
+
+
 .post-card__color-bar {
     display: block;
     height: 4px;
