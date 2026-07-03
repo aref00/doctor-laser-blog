@@ -183,6 +183,4 @@ window.POSTS = [
 		image: "image-3.avif",
 		readTime: "۶ دقیقه",
 	},
-
-
 ];
