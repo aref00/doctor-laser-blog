@@ -164,6 +164,26 @@
 		});
 	}
 
+	function getQueryParam() {
+		try {
+			var params = new URLSearchParams(window.location.search);
+			return params.get("search") || "";
+		} catch (e) {
+			return "";
+		}
+	}
+
+	function setQueryParam(nextQuery) {
+		var url = new URL(window.location.href);
+		var q = String(nextQuery || "").trim();
+		if (q) {
+			url.searchParams.set("search", q);
+		} else {
+			url.searchParams.delete("search");
+		}
+		window.history.replaceState({}, "", url.toString());
+	}
+
 	function init() {
 		var input = document.getElementById("search-input");
 		if (!input) return;
@@ -175,35 +195,42 @@
 			return;
 		}
 
+		// رویلود با توجه به ?search=
+		var initialQuery = getQueryParam();
+		if (initialQuery) input.value = initialQuery;
+
 		function run() {
 			var query = input.value || "";
+			var qTrimmed = query.trim();
 			var result = filterPosts(posts, query);
 
-			if (!query.trim()) {
+			if (!qTrimmed) {
 				// اگر input خالی بود: latest posts
 				result = getLatestSorted(posts);
 			}
 
 			if (!result.length) {
-				if (query.trim()) renderEmpty("مقاله‌ای پیدا نشد");
+				if (qTrimmed) renderEmpty("مقاله‌ای پیدا نشد");
 				else renderEmpty("هنوز مقاله‌ای برای نمایش وجود ندارد");
 				return;
 			}
 
-			// برای اینکه رنگ/ایندکس کارت مثل blog.js باشد، ترتیب نهایی را همان تابع sort برمی‌گردانیم
-			// (در حالت query غیر خالی هم مثل blog.js ترتیب جدیدترین اول را حفظ می‌کنیم)
+			// ترتیب جدیدترین اول مثل blog.js
 			var latestSorted = getLatestSorted(result);
 			renderPosts(latestSorted);
 		}
 
-		// Debounce سبک برای UX بهتر
+		// Debounce + sync url
 		var t;
 		input.addEventListener("input", function () {
 			clearTimeout(t);
-			t = setTimeout(run, 120);
+			t = setTimeout(function () {
+				setQueryParam(input.value);
+				run();
+			}, 120);
 		});
 
-		// initial render
+		// initial render (اگر ?search= داشتیم، input پر شده و run همان را اعمال می‌کند)
 		run();
 	}
 
