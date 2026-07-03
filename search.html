@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="جستجو در مقالات وبلاگ دکتر لیزر | یافتن مقالات براساس عنوان، دسته‌بندی و اسلاگ"
+		/>
+		<title>جستجو | وبلاگ دکتر لیزر</title>
+		<link rel="stylesheet" href="/blog/style.css" />
+	</head>
+	<body>
+		<header class="site-header" role="banner">
+			<div class="container">
+				<a href="/" class="logo" aria-label="دکتر لیزر — صفحه اصلی">
+					<img
+						src="/blog/assets/logo.svg"
+						width="48px"
+						height="48px"
+					/>
+					<span class="logo__text">
+						<span class="logo__name">وبلاگ دکتر لیزر</span>
+						<span class="logo__tagline"
+							>مدریت کلینیک‌های لیزر و زیبایی</span
+						>
+					</span>
+				</a>
+
+				<button
+					class="nav-toggle"
+					id="nav-toggle"
+					aria-label="باز کردن منوی ناوبری"
+					aria-expanded="false"
+					aria-controls="nav-menu"
+				>
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+				</button>
+
+				<nav
+					id="nav-menu"
+					class="nav__menu"
+					role="navigation"
+					aria-label="ناوبری اصلی"
+				>
+					<a href="https://doctor-laser.ir" class="nav__link">خانه</a>
+					<a
+						href="/blog"
+						class="nav__link"
+						aria-current="false"
+						>وبلاگ</a
+					>
+					<a href="https://doctor-laser.ir/clinics" class="nav__link">
+						کلینیک‌ها
+					</a>
+					<a href="https://doctor-laser.ir/contact" class="nav__link"
+						>تماس</a
+					>
+					<a href="https://doctor-laser.ir/register" class="nav__cta"
+						>شروع رایگان</a
+					>
+				</nav>
+			</div>
+		</header>
+
+		<section class="hero" aria-labelledby="hero-heading">
+			<div class="container">
+				<div class="hero__content">
+					<p class="hero__eyebrow">جستجو در مقالات</p>
+					<h1 class="hero__title" id="hero-heading">
+						عنوان، دسته‌بندی و اسلاگ
+					</h1>
+					<p class="hero__subtitle">
+						فقط در متادیتا جستجو می‌کنیم: <strong>title</strong>،
+						<strong>category</strong> و <strong>slug</strong>.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<main id="main-content">
+			<div class="container">
+				<div class="section-header">
+					<h2>نتایج جستجو</h2>
+					<span class="section-header__line" aria-hidden="true"></span>
+				</div>
+
+				<div class="searchbar" role="search" aria-label="جستجو در مقالات وبلاگ">
+					<input
+						id="search-input"
+						type="text"
+						placeholder="جستجو در title، category یا slug..."
+						aria-label="جستجوی مقالات بر اساس متادیتا"
+						autocomplete="off"
+					/>
+				</div>
+
+				<div id="posts-grid" role="list" aria-label="مقالات وبلاگ">
+					<!-- کارت‌ها توسط search.js تزریق می‌شوند -->
+				</div>
+			</div>
+		</main>
+
+		<footer class="site-footer" role="contentinfo">
+			<div class="container">
+				<a
+					href="/"
+					class="site-footer__logo"
+					aria-label="دکتر لیزر — صفحه اصلی"
+				>
+					<img
+						src="/blog/assets/logo.svg"
+						width="38px"
+						height="38px"
+					/>
+					<span class="site-footer__logo-name">دکتر لیزر</span>
+				</a>
+
+				<nav class="site-footer__links" aria-label="ناوبری فوتر">
+					<a href="/">خانه</a>
+					<a href="/blog">وبلاگ</a>
+					<a href="https://doctor-laser.ir/clinics">کلینیک‌ها</a>
+					<a href="https://doctor-laser.ir/contact">تماس با ما</a>
+					<a href="https://doctor-laser.ir/#features">خدمات</a>
+					<a href="https://doctor-laser.ir/register">شروع رایگان</a>
+				</nav>
+
+				<span class="site-footer__divider" aria-hidden="true"></span>
+
+				<p class="site-footer__copy">
+					&copy; ۱۴۰۵ دکتر لیزر. تمامی حقوق محفوظ است.
+				</p>
+			</div>
+		</footer>
+
+		<script src="posts/registry.js"></script>
+		<script src="search.js"></script>
+
+		<script>
+			(function () {
+				var toggle = document.getElementById("nav-toggle");
+				var menu = document.getElementById("nav-menu");
+				if (!toggle || !menu) return;
+
+				toggle.addEventListener("click", function () {
+					var isOpen = menu.classList.toggle("nav__menu--open");
+					toggle.setAttribute("aria-expanded", String(isOpen));
+					toggle.classList.toggle("nav-toggle--open", isOpen);
+				});
+
+				document.addEventListener("click", function (e) {
+					if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+						menu.classList.remove("nav__menu--open");
+						toggle.setAttribute("aria-expanded", "false");
+						toggle.classList.remove("nav-toggle--open");
+					}
+				});
+			})();
+		</script>
+
+		<style>
+			.searchbar {
+				margin: 0 0 28px;
+				max-width: 720px;
+			}
+			.searchbar input {
+				width: 100%;
+				padding: 14px 18px;
+				border: 1px solid var(--border);
+				border-radius: var(--radius-md);
+				background: var(--white);
+				box-shadow: var(--shadow-sm);
+				font-family: var(--font);
+				font-size: 15px;
+				outline: none;
+				transition: border-color 0.15s, box-shadow 0.15s;
+			}
+			.searchbar input:focus {
+				border-color: rgba(149, 52, 197, 0.55);
+				box-shadow: 0 0 0 4px rgba(149, 52, 197, 0.12);
+			}
+			.searchbar input::placeholder {
+				color: var(--muted);
+			}
+		</style>
+	</body>
+</html>
