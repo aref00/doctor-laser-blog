@@ -216,17 +216,6 @@ window.POSTS = [
 		readTime: "۵ دقیقه",
 	},
 	{
-		id: "15",
-		title: "سفر آموزشی دکتر لیزر به کرمان: ارتقای سطح خدمات کلینیک‌های دکتر آژ و لوتوس",
-		slug: "kerman-tour-1405-04",
-		excerpt: "تیم دکتر لیزر با حضور در کرمان، جلسات آموزش حضوری تخصصی را در کلینیک دکتر آژ و کلینیک لوتوس برگزار کرد. در این گزارش به بررسی اهمیت آموزش در بهبود فرایندهای کلینیک‌های زیبایی می‌پردازیم.",
-		date: "2026-08-14",
-		image: "https://doctor-laser.ir/blog/posts/kerman-tour-1405-04/in-clinic-tour-dr-azh.avif",
-		url: "https://doctor-laser.ir/blog/posts/kerman-tour-1405-04/",
-		tags: ["گزارش ویژه", "کرمان", "آموزش"],
-		readTime: "۳ دقیقه",
-	},
-	{
 		slug: "therapeutic-botox",
 		title: "کاربردهای درمانی بوتاکس؛ فراتر از زیبایی",
 		date: "۱۴۰۵-۰۶-۰۲",
