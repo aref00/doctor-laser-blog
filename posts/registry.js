@@ -225,7 +225,4 @@ window.POSTS = [
 		image: "image-2.avif",
 		readTime: "۶ دقیقه",
 	}
-
-
-
 ];
