@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="با قابلیت‌های نرم افزار مدیریت کلینیک دکتر لیزر آشنا شوید؛ از مدیریت نوبت و پرونده مراجعه‌کنندگان تا مشتری‌مداری، حسابداری، انبارداری و دستیار هوش مصنوعی." />
+	<title>نرم افزار مدیریت کلینیک چیست؟ بررسی قابلیت‌های دکتر لیزر | وبلاگ دکتر لیزر</title>
+	<link rel="stylesheet" href="/blog/style.css" />
+	<style>
+		/* اضافه کردن استایل‌های پشتیبانی برای نمایش بهتر تصاویر در صورت نبودن style.css اصلی */
+		.post-body img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 2rem auto;
+			border-radius: 1.5rem;
+			box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+			transition:
+				transform 0.2s ease,
+				box-shadow 0.2s ease;
+		}
+
+		.post-body img:hover {
+			transform: scale(1.01);
+			box-shadow: 0 25px 40px -14px rgba(0, 0, 0, 0.15);
+		}
+
+		.post-body figure {
+			margin: 2rem 0;
+		}
+
+		.post-body figcaption {
+			text-align: center;
+			font-size: 0.85rem;
+			color: #4b5563;
+			margin-top: 0.75rem;
+			font-weight: 400;
+		}
+
+		.inline-icon {
+			vertical-align: middle;
+			margin-left: 0.25rem;
+		}
+
+		.feature-grid-img {
+			background: #f9f5ff;
+			border-radius: 1rem;
+			padding: 0.5rem;
+		}
+
+		@media (max-width: 640px) {
+			.post-body img {
+				border-radius: 1rem;
+				margin: 1.5rem auto;
+			}
+		}
+
+		/* استایل‌های اضافه برای نقل قول و لیست بهتر */
+		.post-body ul,
+		.post-body ol {
+			margin-bottom: 1.75rem;
+			padding-right: 1.5rem;
+		}
+
+		.post-body li {
+			margin-bottom: 0.5rem;
+		}
+
+		.badge--warning {
+			background-color: #ffedd5;
+			color: #b45309;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- ══════════════════════════════════════════════
+       هدر
+  ══════════════════════════════════════════════ -->
+	<header class="site-header" role="banner">
+		<div class="container">
+			<!-- لوگو -->
+			<a href="/blog" class="logo" aria-label="دکتر لیزر — صفحه اصلی">
+				<!-- لوگو پروانه — گرادیان بنفش به صورتی -->
+				<img src="/blog/assets/logo.svg" width="48px" height="48px" alt="لوگو دکتر لیزر" />
+
+				<span class="logo__text">
+					<span class="logo__name">وبلاگ دکتر لیزر</span>
+					<span class="logo__tagline">مدریت کلینیک‌های لیزر و زیبایی</span>
+				</span>
+			</a>
+
+			<!-- دکمه موبایل -->
+			<button class="nav-toggle" id="nav-toggle" aria-label="باز کردن منوی ناوبری" aria-expanded="false"
+				aria-controls="nav-menu">
+				<span class="nav-toggle__bar"></span>
+				<span class="nav-toggle__bar"></span>
+				<span class="nav-toggle__bar"></span>
+			</button>
+
+			<!-- منوی ناوبری -->
+			<nav id="nav-menu" class="nav__menu" role="navigation" aria-label="ناوبری اصلی">
+				<a href="/" class="nav__link">خانه</a>
+				<a href="/blog" class="nav__link nav__link--active" aria-current="page">وبلاگ</a>
+				<a href="/clinics" class="nav__link"> کلینیک‌ها </a>
+				<a href="/contact" class="nav__link">تماس</a>
+				<a href="/register" class="nav__cta">شروع رایگان</a>
+			</nav>
+		</div>
+	</header>
+
+	<!-- ══════════════════════════════════════════════
+       محتوای مقاله (مراقبت‌های قبل از لیزر)
+  ══════════════════════════════════════════════ -->
+	<main id="main-content">
+		<article class="post-layout" itemscope itemtype="https://schema.org/BlogPosting">
+			<!-- مسیر صفحه -->
+			<nav class="breadcrumb" aria-label="مسیر صفحه">
+				<a href="https://doctor-laser.ir">خانه</a>
+				<span class="breadcrumb__sep" aria-hidden="true">&#8250;</span>
+				<a href="/blog">وبلاگ</a>
+				<span class="breadcrumb__sep" aria-hidden="true">&#8250;</span>
+				<span aria-current="page">
+					گزارش راه‌اندازی دکتر لیزر در کلینیک دکتر زهرا محمدی
+				</span>
+			</nav>
+
+			<!-- هدر مقاله -->
+			<header class="post-header">
+				<span class="badge badge--warning">گزارش راه‌اندازی</span>
+
+				<h1 class="post-header__title" itemprop="headline">
+					از تماس اولیه تا راه‌اندازی حضوری؛ تجربه کلینیک دکتر زهرا محمدی با دکتر لیزر
+				</h1>
+
+				<div class="post-header__meta" role="contentinfo">
+					<span class="post-header__meta-item">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+							<line x1="16" y1="2" x2="16" y2="6" />
+							<line x1="8" y1="2" x2="8" y2="6" />
+							<line x1="3" y1="10" x2="21" y2="10" />
+						</svg>
+						<time itemprop="datePublished" datetime="2026-10-15">
+							۱۵ مهر ۱۴۰۵
+						</time>
+					</span>
+
+					<span class="post-header__meta-item">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<circle cx="12" cy="12" r="10" />
+							<polyline points="12 6 12 12 16 14" />
+						</svg>
+						۵ دقیقه مطالعه
+					</span>
+
+					<span class="post-header__meta-item">
+						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+							<circle cx="12" cy="7" r="4" />
+						</svg>
+						تیم دکتر لیزر
+					</span>
+				</div>
+			</header>
+
+			<!-- بدنه مقاله -->
+			<div class="post-body" itemprop="articleBody">
+
+				<p>
+					راه‌اندازی یک نرم‌افزار تازه در کلینیک، فقط به فعال‌کردن یک حساب کاربری
+					محدود نمی‌شود. برای اینکه ابزارهای نرم‌افزار به بخشی از کار روزانه
+					مجموعه تبدیل شوند، لازم است نیازهای کلینیک شنیده شود، بخش‌های مختلف
+					به‌درستی معرفی شوند و کارکنان فرصت داشته باشند پرسش‌هایشان را مطرح کنند.
+				</p>
+
+				<p>
+					در این گزارش، روند آشنایی و راه‌اندازی نرم‌افزار دکتر لیزر در
+					<strong>کلینیک دکتر زهرا محمدی در تهران</strong> را مرور می‌کنیم؛
+					مسیری که با یک تماس اولیه شروع شد و با دمو، جلسه حضوری، آموزش کادر
+					و استفاده از امکانات نرم‌افزار در فضای کلینیک ادامه پیدا کرد.
+				</p>
+
+				<figure>
+					<img src="/blog/posts/dr-zahra-mohammadi-clinic/clinic-training.avif"
+						alt="جلسه آموزش و راه‌اندازی نرم‌افزار دکتر لیزر برای کادر کلینیک دکتر زهرا محمدی"
+						loading="lazy" onerror="
+						this.src = 'https://placehold.co/800x400/f3f4f6/9ca3af?text=جلسه+آموزش+دکتر+لیزر';
+						this.onerror = null;
+					" />
+					<figcaption>
+						جلسه حضوری آموزش و راه‌اندازی دکتر لیزر برای کادر کلینیک دکتر زهرا محمدی
+					</figcaption>
+				</figure>
+
+				<h2>آغاز مسیر با تماس خانم دکتر محمدی با تیم پشتیبانی</h2>
+
+				<p>
+					نقطه شروع این همکاری، تماس خانم دکتر زهرا محمدی با تیم پشتیبانی
+					دکتر لیزر بود. در این گفت‌وگوی اولیه، نیازها و پرسش‌های کلینیک
+					بررسی شد و تیم پشتیبانی با توجه به آن‌ها، نسخه دمو نرم‌افزار را
+					برای مشاهده و آشنایی بیشتر در اختیار ایشان قرار داد.
+				</p>
+
+				<p>
+					دمو این فرصت را فراهم کرد تا خانم دکتر محمدی و همکارانشان پیش از
+					شروع کار، محیط نرم‌افزار و بخش‌های مختلف آن را ببینند و با شیوه
+					استفاده از امکانات آشنا شوند. پس از بررسی دمو و رضایت از آن،
+					قرار شد تیم دکتر لیزر برای راه‌اندازی و آموزش حضوری به کلینیک
+					مراجعه کند.
+				</p>
+
+				<h2>راه‌اندازی حضوری و آموزش کادر کلینیک</h2>
+
+				<p>
+					در جلسه حضوری، نرم‌افزار دکتر لیزر برای کلینیک راه‌اندازی شد و
+					آموزش بخش‌های مختلف آن به کادر مجموعه ارائه شد. آموزش با تمرکز
+					بر کاربری روزمره کلینیک انجام شد تا اعضای تیم بتوانند با بخش‌های
+					موردنیاز خود آشنا شوند و فرایندهایشان را در نرم‌افزار دنبال کنند.
+				</p>
+
+				<p>
+					یکی از بخش‌های مهم این جلسه، پاسخ‌گویی به پرسش‌ها و رفع ابهام‌ها
+					بود. نیازها و مواردی که برای شروع کار در ذهن خانم دکتر محمدی و کادر
+					کلینیک مطرح بود، در همان جلسه حضوری بررسی شد تا تیم مجموعه بتواند
+					با شناخت روشن‌تری استفاده از نرم‌افزار را آغاز کند.
+				</p>
+
+				<blockquote>
+					<p>
+						<strong>هدف از آموزش حضوری:</strong>
+						فقط معرفی امکانات نرم‌افزار نیست؛ همراهی با کادر کلینیک برای
+						شناخت بهتر بخش‌ها، پاسخ به پرسش‌ها و آماده‌کردن مجموعه برای
+						استفاده روزانه از سیستم است.
+					</p>
+				</blockquote>
+
+				<h2>نظم بیشتر در تصاویر قبل و بعد</h2>
+
+				<p>
+					یکی از نیازهای کلینیک، سامان‌دهی تصاویر قبل و بعد مراجعه‌کنندگان
+					بود. با استفاده از امکانات دکتر لیزر، تصاویر مرتبط با پرونده‌ها
+					می‌توانند منظم‌تر ثبت و مدیریت شوند. این نظم دسترسی به تصاویر
+					را برای تیم کلینیک ساده‌تر می‌کند و کمک می‌کند هر تصویر، بر اساس
+					نیاز و مجوزهای مربوط، برای نمایش انتخاب شود.
+				</p>
+
+				<p>
+					همچنین کلینیک می‌تواند هرکدام از تصاویر را که برای نمایش عمومی
+					مناسب می‌داند، با رعایت رضایت مراجعه‌کننده و ملاحظات حریم خصوصی،
+					برای معرفی نمونه‌کارها انتخاب کند. تصمیم درباره عمومی‌کردن تصاویر
+					در اختیار کلینیک است.
+				</p>
+
+				<h2>نمایش نمونه‌کارها و فراخوانی بیماران در کلینیک</h2>
+
+				<p>
+					در کنار مدیریت اطلاعات در پنل، برخی از قابلیت‌های محلی دکتر لیزر
+					برای استفاده در فضای خود کلینیک نیز به کار گرفته شد. در این مجموعه،
+					نمایشگر داخل کلینیک برای دو کاربرد در نظر گرفته شده است:
+					<strong>فراخوانی بیماران</strong> و <strong>نمایش نمونه‌کارها</strong>.
+				</p>
+
+				<p>
+					به این ترتیب، مراجعه‌کنندگان می‌توانند فراخوانی را روی مانیتور
+					دنبال کنند و در نمایشگر دیگری یا در بخش نمایش محتوای کلینیک،
+					نمونه‌کارهای انتخاب‌شده را ببینند. استفاده از این امکانات محلی
+					کمک می‌کند بخشی از تجربه حضور در کلینیک نیز با ابزارهای نرم‌افزار
+					هماهنگ شود.
+				</p>
+
+				<h2>بازخورد مراجعه‌کنندگان؛ نشانه‌ای از تجربه آن‌ها</h2>
+
+				<p>
+					در صفحه کلینیک دکتر زهرا محمدی، بازخوردهای ثبت‌شده مراجعه‌کنندگان
+					نیز دیده می‌شود. تصویر نظرات ارسالی، امتیاز کلی ۵ از ۵ را در کنار
+					۷ نظر نشان می‌دهد. در میان پیام‌ها، مراجعه‌کنندگان از تجربه خود
+					و برخورد کادر کلینیک با لحنی مثبت نوشته‌اند.
+				</p>
+
+				<p>
+					ثبت و در دسترس‌بودن چنین بازخوردهایی به کلینیک کمک می‌کند صدای
+					مراجعه‌کنندگان را بهتر ببیند و تجربه آن‌ها را پیگیری کند. این
+					نظرات، بازخورد خود مراجعه‌کنندگان درباره تجربه‌شان هستند و نباید
+					به‌تنهایی به‌عنوان اثبات نتیجه یک نرم‌افزار یا خدمت خاص تلقی شوند.
+				</p>
+
+				<figure>
+					<img src="/blog/posts/dr-zahra-mohammadi-clinic/patient-reviews.avif"
+						alt="تصویر نظرات و امتیاز مراجعه‌کنندگان کلینیک دکتر زهرا محمدی" loading="lazy" onerror="
+						this.src = 'https://placehold.co/800x400/f3f4f6/9ca3af?text=نظرات+مراجعین+کلینیک';
+						this.onerror = null;
+					" />
+					<figcaption>
+						نمایی از امتیاز و نظرات ثبت‌شده مراجعه‌کنندگان کلینیک دکتر زهرا محمدی
+					</figcaption>
+				</figure>
+
+				<h2>از شروع کار تا مشاهده تغییرات در کمتر از یک ماه</h2>
+
+				<p>
+					کمتر از یک ماه پس از شروع استفاده از نرم‌افزار، کلینیک توانست
+					تغییرات عملی حاصل از راه‌اندازی را در روند کار خود مشاهده کند:
+					تصاویر قبل و بعد نظم بیشتری پیدا کردند، امکان انتخاب تصاویر
+					برای نمایش فراهم شد و ابزارهای محلی برای نمایش نمونه‌کارها و
+					فراخوانی بیماران در فضای کلینیک به کار گرفته شدند.
+				</p>
+
+				<p>
+					هم‌زمان، دسترسی به بازخوردهای مراجعه‌کنندگان نیز برای کلینیک
+					مهم بود؛ چون این نظرات امکان توجه بیشتر به تجربه مراجعان و
+					پیگیری دیدگاه‌های آن‌ها را فراهم می‌کنند.
+				</p>
+
+				<p>
+					این گزارش، تجربه راه‌اندازی و قابلیت‌هایی را شرح می‌دهد که
+					کلینیک در این بازه به کار گرفته است؛ میزان و نوع نتایج می‌تواند
+					با توجه به شیوه استفاده و نیازهای هر مجموعه متفاوت باشد.
+				</p>
+
+				<h2>اطلاعات کلینیک دکتر زهرا محمدی</h2>
+
+				<p>
+					برای آشنایی بیشتر با کلینیک و مشاهده صفحه آن در دکتر لیزر،
+					می‌توانید از پیوند زیر بازدید کنید:
+				</p>
+
+				<p>
+					<a href="https://doctor-laser.ir/clinics/کلینیک-دکتر-زهرا-محمدی-55">
+						مشاهده صفحه کلینیک دکتر زهرا محمدی در دکتر لیزر
+					</a>
+				</p>
+
+				<h2>جمع‌بندی</h2>
+
+				<p>
+					همکاری با کلینیک دکتر زهرا محمدی با تماس اولیه ایشان با تیم
+					پشتیبانی آغاز شد؛ پس از ارسال و بررسی دمو، تیم دکتر لیزر برای
+					راه‌اندازی حضوری به کلینیک رفت و آموزش بخش‌های مختلف را به
+					کادر مجموعه ارائه کرد.
+				</p>
+
+				<p>
+					در همان جلسه، پرسش‌ها و ابهام‌های مطرح‌شده بررسی شد. سپس امکاناتی
+					مانند مدیریت منظم‌تر تصاویر قبل و بعد، انتخاب تصاویر برای نمایش
+					عمومی با نظر کلینیک، فراخوانی بیماران و نمایش نمونه‌کارها روی
+					نمایشگر داخل کلینیک در جریان کار قرار گرفتند.
+				</p>
+
+				<p>
+					این تجربه نشان می‌دهد که راه‌اندازی نرم‌افزار، وقتی با آموزش و
+					پاسخ‌گویی متناسب با نیازهای مجموعه همراه باشد، می‌تواند مسیر
+					شروع استفاده از ابزارهای دیجیتال را برای کادر کلینیک روشن‌تر کند.
+				</p>
+
+				<!-- CTA -->
+				<div style="
+				background-color: #f3f4f6;
+				padding: 1.5rem;
+				border-radius: 1rem;
+				margin: 2rem 0;
+				text-align: center;
+			">
+					<h3 style="margin-top: 0">
+						برای کلینیک خود دمو و راه‌اندازی دریافت کنید
+					</h3>
+
+					<p style="margin-bottom: 0">
+						با
+						<a href="https://doctor-laser.ir?utm_source=blog_dr_zahra_mohammadi" style="
+						color: #7c3aed;
+						font-weight: bold;
+						text-decoration: underline;
+					">
+							دکتر لیزر
+						</a>
+						با قابلیت‌های مدیریت کلینیک، پرونده‌ها، تصاویر، بازخوردها و
+						ابزارهای محلی آشنا شوید.
+					</p>
+
+					<p style="margin-top: 0.75rem; margin-bottom: 0">
+						👈
+						<a href="https://doctor-laser.ir/register">
+							درخواست شروع و آشنایی با دکتر لیزر
+						</a>
+					</p>
+				</div>
+
+			</div>
+			<!-- /.post-body -->
+		</article>
+	</main>
+
+
+
+	<!-- ══════════════════════════════════════════════
+       فوتر
+  ══════════════════════════════════════════════ -->
+	<footer class="site-footer" role="contentinfo">
+		<div class="container">
+			<a href="/" class="site-footer__logo" aria-label="دکتر لیزر — صفحه اصلی">
+				<img src="/blog/assets/logo.svg" width="38px" height="38px" alt="لوگو دکتر لیزر" />
+				<span class="site-footer__logo-name">دکتر لیزر</span>
+			</a>
+
+			<nav class="site-footer__links" aria-label="ناوبری فوتر">
+				<a href="/">خانه</a>
+				<a href="/blog">وبلاگ</a>
+				<a href="/clinics">کلینیک‌ها</a>
+				<a href="/contact">تماس با ما</a>
+				<a href="https://doctor-laser.ir/#features">خدمات</a>
+				<a href="/register">شروع رایگان</a>
+			</nav>
+
+			<span class="site-footer__divider" aria-hidden="true"></span>
+
+			<p class="site-footer__copy">
+				&copy; ۱۴۰۵ دکتر لیزر. تمامی حقوق محفوظ است.
+			</p>
+		</div>
+	</footer>
+
+	<!-- منوی موبایل (اسکریپت مشابه قالب اصلی) -->
+	<script>
+		(function () {
+			var toggle = document.getElementById("nav-toggle");
+			var menu = document.getElementById("nav-menu");
+			if (!toggle || !menu) return;
+			toggle.addEventListener("click", function () {
+				var isOpen = menu.classList.toggle("nav__menu--open");
+				toggle.setAttribute("aria-expanded", String(isOpen));
+				toggle.classList.toggle("nav-toggle--open", isOpen);
+			});
+			document.addEventListener("click", function (e) {
+				if (
+					!toggle.contains(e.target) &&
+					!menu.contains(e.target)
+				) {
+					menu.classList.remove("nav__menu--open");
+					toggle.setAttribute("aria-expanded", "false");
+					toggle.classList.remove("nav-toggle--open");
+				}
+			});
+		})();
+	</script>
+</body>
+
+</html>
